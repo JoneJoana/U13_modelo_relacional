@@ -1,0 +1,4 @@
+Cliente(int PK codigoCliente, text nombre)
+Proveedor(int PK codigoProveedor, text nombre)
+Producto(int PK codigoProducto, int FK codigoProveedor, double cantidad, double unidades, date fechaEncargo)
+Pedido(int PK codigoPedido, date fechaPedido, int codigoCliente, int codigoProducte, int numUnidades)

@@ -1,0 +1,7 @@
+Sancion(int PK numDias)
+Socio(int PK numSocio, text nombre, text apellidos, text telefono, date fechaCaducidad, int FK numDias)
+Fondo(text PK titulo, text PK autor, int cantidad)
+Libro(text PK signatura, text PK FK titulo, text PK FK autor, boolean disponible)
+Prestamo(int PK numPrestamo, date fechaPrestamo, int FK numSocio, text FK titulo, text autor, text signatura, text tipo)
+Prestamo_S(int PK FK numPrestamo)
+Prestamo_E(int PK FK numPrestamo, date fechaDevolucion)
