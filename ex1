@@ -1,0 +1,1 @@
+Atleta (int num_dorsal (pk),text nombre, int num_dorsal_relevo (fk)) ON num_dorsal_reelevo REFERENCIA ATLETA
