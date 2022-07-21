@@ -1,0 +1,12 @@
+Elemento(text nombre_elemento (pk),num peso_atomico,text simbolo,int num_atomico)
+
+Compuesto(text nombre_compuesto (pk), estado)
+
+Compuesto_por((nombre_elemento,nombre_compuesto(pk)),proporcion) ON nombre_elemento REFERENCIA ELEMENTO I
+    nombre_compuesto REFERENCIA COMPUESTO
+
+Gaseoso(number coef_expan, int temp_lic, nombre_compuesto) ON nombre_compuesto REFERENCIA Compuesto
+
+Liquido(int densidad,int temp_evap, nombre_compuesto) ON nombre_compuesto REFERENCIA Compuesto
+
+Solido(text color,text olor,text dureza, nombre_compuesto) ON nombre_compuesto REFERENCIA Compuesto
