@@ -19,7 +19,7 @@ double Saldo,
 
 Transaccion(
 PK double numTransaccion,
-date fecha,
+date Fecha,
 String tipoOperacion,
-double cantidad,
+double Cantidad,
 );
