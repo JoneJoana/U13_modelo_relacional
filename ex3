@@ -1,1 +1,25 @@
+Sucursal(
+PK int numSucursal,
+varchar Ciudad,
+Boolean Activo,
+);
 
+Cliente(
+PK varchar DNI,
+varchar Nombre,
+varchar Apellidos,
+varchar Direccion,
+varchar Ciudad,
+);
+
+Cuenta(
+PK int numCuenta,
+double Saldo,
+);
+
+Transaccion(
+PK double numTransaccion,
+date fecha,
+String tipoOperacion,
+double cantidad,
+);
