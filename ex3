@@ -19,7 +19,16 @@ double Saldo,
 
 Transaccion(
 PK double numTransaccion,
+FK int numCuenta,
 date Fecha,
 varchar tipoOperacion,
 double Cantidad,
 );
+
+Abrir(
+PK interger abrir,
+FK int numCuenta,
+FK varchar DNI,
+FK int numSucursal,
+);
+
