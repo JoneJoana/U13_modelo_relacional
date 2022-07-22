@@ -1,0 +1,47 @@
+Coche(
+PK int numCoche,
+varchar Marca,
+varchar Modelo,
+varchar numMatricula,
+date fechaCompra,
+date ultimaRevision
+);
+
+ParqueBomberos(
+PK varchar codParque,
+varchar Nombre,
+varchar Direccion,
+varchar Telefono,
+varchar Categoria,
+);
+
+Bombero(
+PK varchar codBombero,
+varchar Nombre,
+varchar Apellidos,
+date fechaNacimiento,
+varchar DNI,
+varchar Direccion,
+varchar Telefono,
+);
+
+Turno(
+PK varchar codTurno,
+varchar Descripcion,
+);
+
+Periodo(
+PK date fechaInicio,
+PK date fechaFin,
+);
+
+Equipo(
+PK varchar codEquipo,
+varchar Nombre,
+);
+
+PeticionServicio(
+PK varchar codPetServicio,
+varchar tipoServicio,
+int gradoUrgencia,
+);

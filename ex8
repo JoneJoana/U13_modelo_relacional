@@ -1,0 +1,10 @@
+Arrendatario(text cif/nifarrendatario,int nombreFiscal,text nombreFirmante,text cargoFirmante,text actividad,
+  text direccion,int codigoPostal,text localidad,text provincia,int telfFijo,int telfMovil)
+  
+Nave(int codigoNave,int poligono,text calle,int numero,text localidad,int codigoPostal,text provincia,int telf,
+  text caracteristicas,text foto,text datosEscritura,boolean alquilada,int gastoscomunidad,int numCuenta,int diasPago,
+  date fecha_alquiler,date fechaFinAlquiler,int importeAlquiler,text cif/nifArrendatario) donde cif/nifArrendataria 
+    REFERENCIA ARRENDATARIO
+ 
+Recibo(int numRecivo,int importeTotal,int importeIva,boolean pagado,date fecha,int codigoNave,cif/nifArrendatario)
+  donde cif/nifArrendataria REFERENCIA ARRENDATARIO i codigoNave REFERENCIA NAVE
