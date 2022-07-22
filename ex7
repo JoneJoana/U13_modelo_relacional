@@ -1,0 +1,46 @@
+Arrendatario(
+	text nif PK,
+	text nombreFiscal,
+	text nombreFirmante,
+	text cargoFirmante,
+	text direccion,
+	text codigoPostal,
+	text localidad,
+	text telefonoFijom
+	text telefonoMovil,
+	text fax,
+	text actividad,
+	text provincia
+)
+
+Nave(
+	int codigoNave PK,
+	text poligonom
+	text calle,
+	text numero,
+	text localidad,
+	text codigoPostal,
+	text Provincia,
+	text telefono,
+	text caracteristicas,
+	text foto,
+	text datosEscritura,
+	boolean alquilada,
+	text gastosComunidad,
+	text nif FK(Arrendatario),
+	text numeroCuenta,
+	text diasPago,
+	date fechaAlquiler,
+	date fechaFinAlquiler,
+	double importeAlquiler
+)
+
+Recibo(
+	int numeroRecibo PK,
+	double importeTotal,
+	double importeIVA,
+	boolean pagado,
+	date fecha,
+	int codigoNave FK(Nave),
+	text nif FK(Arrendatario)
+)
