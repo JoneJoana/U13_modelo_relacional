@@ -20,6 +20,6 @@ double Saldo,
 Transaccion(
 PK double numTransaccion,
 date Fecha,
-String tipoOperacion,
+varchar tipoOperacion,
 double Cantidad,
 );
