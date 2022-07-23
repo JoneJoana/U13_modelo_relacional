@@ -26,7 +26,6 @@ double Cantidad,
 );
 
 Abrir(
-PK interger abrir,
 FK int numCuenta,
 FK varchar DNI,
 FK int numSucursal,
