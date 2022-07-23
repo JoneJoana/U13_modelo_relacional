@@ -23,6 +23,9 @@ date fechaNacimiento,
 varchar DNI,
 varchar Direccion,
 varchar Telefono,
+FK varchar codParque,
+FKvarchar codEquipo,
+varchar Puesto,
 );
 
 Turno(
@@ -44,4 +47,19 @@ PeticionServicio(
 PK varchar codPetServicio,
 varchar tipoServicio,
 int gradoUrgencia,
+FK codEquipo,
+);
+
+TrabajaEn(
+    PK FK codBombero,
+    PK FK fechaInicio,
+    PK FK fechaFin,
+    FK codigoTurno
+);
+
+Recibe(
+FK varchar codPetServicio,
+FK varchar codParque,
+date Fecha,
+date Hora,
 );
