@@ -1,5 +1,6 @@
 Coche(
 PK int numCoche,
+FK varchar codParque,
 varchar Marca,
 varchar Modelo,
 varchar numMatricula,
