@@ -1,10 +1,19 @@
-Arrendatario(text cif/nifarrendatario,int nombreFiscal,text nombreFirmante,text cargoFirmante,text actividad,
-  text direccion,int codigoPostal,text localidad,text provincia,int telfFijo,int telfMovil)
-  
-Nave(int codigoNave,int poligono,text calle,int numero,text localidad,int codigoPostal,text provincia,int telf,
-  text caracteristicas,text foto,text datosEscritura,boolean alquilada,int gastoscomunidad,int numCuenta,int diasPago,
-  date fecha_alquiler,date fechaFinAlquiler,int importeAlquiler,text cif/nifArrendatario) donde cif/nifArrendataria 
-    REFERENCIA ARRENDATARIO
- 
-Recibo(int numRecivo,int importeTotal,int importeIva,boolean pagado,date fecha,int codigoNave,cif/nifArrendatario)
-  donde cif/nifArrendataria REFERENCIA ARRENDATARIO i codigoNave REFERENCIA NAVE
+Piso(int puerta PK,text direccion, int cp, text localidad,text provincia, int telf)
+
+Anotacion(int cod_anotacion pk, date fecha, double importe)
+
+Ingreso_recibo(cod_anotacion,puerta (pk),date mes, boolean pagado) puerta referencia piso, cod_anotacion referencia anotacion
+
+detalle_recibo(int num_linea pk, text concepto, double importe, puerta fk) puerta referencia piso
+
+Cargo(int cod_cargo pk, text nombre, text funciones)
+
+Ostenta(puerta_piso,cod_cargo (pk), date fecha_posesion)
+
+Ingreso_extra(cod_anotacuon, text concepto)
+
+Tipo_gasto_fijo(cod_tipoGasto pk, text nombre, text direccion)
+
+Gasto_fijo(cod_anotacion pk, date fecha_inicio, date fecha_final, double consumo, int cod_tipo_gasto fk) cod_tipo_gasto referencia tipo gasto fijo
+
+Gasto_variable(cod_anotacion pk, date fecha_factura, text concepto, int num_factura)
